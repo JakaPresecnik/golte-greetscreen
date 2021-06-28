@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Big+Shoulders+Display:wght@300;500&family=Comfortaa:wght@400;700&display=swap');
+
 .ostalo {
     grid-row: 3/4;
     grid-column: 1/3;
@@ -5,24 +7,66 @@
     align-self: stretch;
 }
 .cenik {
-    background-color: rgba(167, 211, 64, 0.4);
+    background-color: rgba(1, 1, 5, 0.5);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
     margin: 1em;
     padding: 0.5em;
-    border: 10px solid #A7D340;
+    border: 2px solid #8CBE1C;
     border-radius: 50px;
     text-align: center;
 }
 .cenik h3, .cenik p {
     margin: 0 0 10px 0;
 }
+.cenik h3 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    color: #c0da89;
+    border-bottom: 1px solid #8CBE1C;
+}
+
+.cenik p {
+    font-family: 'Big Shoulders Display', cursive;
+    color: #8CBE1C;
+    font-size: 1.1em;
+    font-weight: 500;
+}
 .cenik table{  
     display: flex;
     flex-direction: row;
+    justify-content:  center;
+    margin: auto;
 }
 .cenik table tr {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+.cenik table td, .cenik table th {
+    border: 1px solid #8CBE1C;
+    font-family: 'Comfortaa', cursive;
+    padding: 0.3em 0.7em;
+}
+.cenik table td {
+    border-bottom: none;
+    color: #c0da89;
+    font-weight: 700;
+}
+.cenik table th {
+    color: #8CBE1C;
+    border-top: none;
+    font-weight: 400;
+}
+.cenik table tr th:first-child {
+    border-left: none;
+}
+.cenik table tr:last-child th{
+    border-right: none;
+}
+.cenik table tr:last-child td{
+    border-right: none;
+}
+.cenik table tr:first-child  td{
+    border-left: none;
 }
