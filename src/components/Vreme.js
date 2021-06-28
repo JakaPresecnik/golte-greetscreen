@@ -11,7 +11,9 @@ const icons = importAllIcons(require.context('../icons', false, /\.(png|jpe?g|sv
 function Vreme () {
     const [golteSkytech, setGolteSkytech] = useState({});
     const [mozirjeOpenWeather, setMozirjeOpenWeather] = useState('');
-    const [loading, setLoading] = useState(true);
+    const [loadingData, setLoadingData] = useState(true);
+    const [loadingVreme, setLoadingVreme] = useState(true);
+    const [time, setTime] = useState(null);
 
     const getData =  async () => {
         let data = {}
@@ -37,6 +39,7 @@ function Vreme () {
             data.temperatura = temperaturaHtml.textContent;
 
             setGolteSkytech(data);
+            setLoadingData(false);
         } );
 
         XHR.open('POST', 'http://skytech.si/skytechsys/data.php');
@@ -45,21 +48,40 @@ function Vreme () {
 
     const getWeather = async () => {
         const vreme = await fetch('//api.openweathermap.org/data/2.5/weather?q=Mozirje&appid=' + process.env.REACT_APP_API_KEY)
-        const data = await vreme.json()
-        setMozirjeOpenWeather(data.weather[0].icon)
-        setLoading(false)
+        const data = await vreme.json();
+        setMozirjeOpenWeather(data.weather[0].icon);
+        setLoadingVreme(false)
     }
 
     useEffect(() => {
-        getWeather()
         getData()
+        getWeather()
+
+        const intervalCas = setInterval(() => {
+            const d = new Date();
+            const ura = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+            const minuta = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+            const sekunda = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
+
+            setTime(ura + ':' + minuta + ':' + sekunda)
+        }, 1000);
+
+        const intervalPodatki = setInterval(() => {
+            getData()
+            getWeather()
+        }, 1800000);
+
+        return () => {
+            clearInterval(intervalPodatki)
+        }
     }, [])
 
-    if(loading) {
+    if(loadingData || loadingVreme) {
         return (<div>Loading...</div>)
     }
     return (
         <div className="vreme">
+            <p className="cas">{time}</p>
             <img className="vreme-ikona" src={icons[mozirjeOpenWeather + '.svg'].default} />
             <p><span>Temperatura:</span></p>
             <p className="temperatura">{golteSkytech.temperatura}</p>
