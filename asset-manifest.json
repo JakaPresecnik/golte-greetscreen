@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/golte-greetscreen/static/css/main.caa7edb3.chunk.css",
+    "main.js": "/golte-greetscreen/static/js/main.34216db6.chunk.js",
+    "main.js.map": "/golte-greetscreen/static/js/main.34216db6.chunk.js.map",
+    "runtime-main.js": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js",
+    "runtime-main.js.map": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js.map",
+    "static/js/2.a59bcf44.chunk.js": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js",
+    "static/js/2.a59bcf44.chunk.js.map": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js.map",
+    "index.html": "/golte-greetscreen/index.html",
+    "static/css/main.caa7edb3.chunk.css.map": "/golte-greetscreen/static/css/main.caa7edb3.chunk.css.map",
+    "static/js/2.a59bcf44.chunk.js.LICENSE.txt": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js.LICENSE.txt",
+    "static/media/01d.svg": "/golte-greetscreen/static/media/01d.dc2b5aa4.svg",
+    "static/media/01n.svg": "/golte-greetscreen/static/media/01n.bf8dc6ce.svg",
+    "static/media/02d.svg": "/golte-greetscreen/static/media/02d.f67f9128.svg",
+    "static/media/02n.svg": "/golte-greetscreen/static/media/02n.bdc28627.svg",
+    "static/media/03d.svg": "/golte-greetscreen/static/media/03d.a7d25e0e.svg",
+    "static/media/03n.svg": "/golte-greetscreen/static/media/03n.a7d25e0e.svg",
+    "static/media/04d.svg": "/golte-greetscreen/static/media/04d.aaa54f3a.svg",
+    "static/media/04n.svg": "/golte-greetscreen/static/media/04n.aaa54f3a.svg",
+    "static/media/09d.svg": "/golte-greetscreen/static/media/09d.c665ca37.svg",
+    "static/media/09n.svg": "/golte-greetscreen/static/media/09n.c665ca37.svg",
+    "static/media/10d.svg": "/golte-greetscreen/static/media/10d.a8fcbfd2.svg",
+    "static/media/10n.svg": "/golte-greetscreen/static/media/10n.19403ee2.svg",
+    "static/media/11d.svg": "/golte-greetscreen/static/media/11d.ef84eefb.svg",
+    "static/media/11n.svg": "/golte-greetscreen/static/media/11n.ef84eefb.svg",
+    "static/media/13d.svg": "/golte-greetscreen/static/media/13d.4d944b0a.svg",
+    "static/media/13n.svg": "/golte-greetscreen/static/media/13n.4d944b0a.svg",
+    "static/media/50d.svg": "/golte-greetscreen/static/media/50d.1ec62814.svg",
+    "static/media/50n.svg": "/golte-greetscreen/static/media/50n.1ec62814.svg",
+    "static/media/logo.db9ce7b2.png": "/golte-greetscreen/static/media/logo.db9ce7b2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4e0cf46.js",
+    "static/js/2.a59bcf44.chunk.js",
+    "static/css/main.caa7edb3.chunk.css",
+    "static/js/main.34216db6.chunk.js"
+  ]
+}
