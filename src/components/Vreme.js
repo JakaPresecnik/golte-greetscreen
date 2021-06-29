@@ -42,7 +42,7 @@ function Vreme () {
             setLoadingData(false);
         } );
 
-        XHR.open('POST', 'http://skytech.si/skytechsys/data.php');
+        XHR.open('POST', 'https://skytech.si/skytechsys/data.php');
         XHR.send(reqData)
     }
 
