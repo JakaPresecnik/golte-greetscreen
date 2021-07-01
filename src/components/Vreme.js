@@ -42,7 +42,7 @@ function Vreme () {
             setLoadingData(false);
         } );
 
-        XHR.open('POST', 'https://cors-anywhere.herokuapp.com/https://skytech.si/skytechsys/data.php');
+        XHR.open('POST', 'https://cors-proxy.htmldriven.com/?url=https://skytech.si/skytechsys/data.php');
         XHR.send(reqData)
     }
 
