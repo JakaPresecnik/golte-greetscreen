@@ -11,8 +11,8 @@
 
 ### Cenik:
 - [x] template podatkov za cenik
-- [ ] Cenik razdeljen v več skupin. Torej rabim for loop na keys od teh skupin
-- [ ] setinterval da se te skupine na ekranu zamenjajo na par sekund
+- [x] Cenik razdeljen v več skupin. Torej rabim for loop na keys od teh skupin
+- [x] setinterval da se te skupine na ekranu zamenjajo na par sekund
 - [ ] Naredi Redux localstorage za shranjevanje podatkov v browserju
 - [ ] Naredi router in komponento za posodabljanje teh podatkov
 

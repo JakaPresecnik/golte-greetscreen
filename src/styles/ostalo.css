@@ -15,6 +15,7 @@
     border: 2px solid #8CBE1C;
     border-radius: 50px;
     text-align: center;
+    overflow: hidden;
 }
 .cenik h3, .cenik p {
     margin: 0 0 10px 0;
@@ -71,6 +72,21 @@
     border-left: none;
 }
 
+/*                                                                    .-'''-.                
+                                                                  '   _    \              
+             _..._   .--. __  __   ___                     .--. /   /` '.   \    _..._    
+           .'     '. |__||  |/  `.'   `.                   |__|.   |     \  '  .'     '.  
+          .   .-.   ..--.|   .-.  .-.   '              .|  .--.|   '      |  '.   .-.   . 
+    __    |  '   '  ||  ||  |  |  |  |  |    __      .' |_ |  |\    \     / / |  '   '  | 
+ .:--.'.  |  |   |  ||  ||  |  |  |  |  | .:--.'.  .'     ||  | `.   ` ..' /  |  |   |  | 
+/ |   \ | |  |   |  ||  ||  |  |  |  |  |/ |   \ |'--.  .-'|  |    '-...-'`   |  |   |  | 
+`" __ | | |  |   |  ||  ||  |  |  |  |  |`" __ | |   |  |  |  |               |  |   |  | 
+ .'.''| | |  |   |  ||__||__|  |__|  |__| .'.''| |   |  |  |__|               |  |   |  | 
+/ /   | |_|  |   |  |                    / /   | |_  |  '.'                   |  |   |  | 
+\ \._,\ '/|  |   |  |                    \ \._,\ '/  |   /                    |  |   |  | 
+ `--'  `" '--'   '--'                     `--'  `"   `'-'                     '--'   '--'
+ */
+
 #slideset2 {
     height: 5.4em; 
     position: relative;
@@ -82,26 +98,50 @@
     text-align: center;
 }
 
-@keyframes autoplay2 {
+/* @keyframes autoplay2 {
     0% {top: 100%}
     4% {top: 0%}
     20% {top: 0%}
     24% {top: -100%}
     100% {top: -100%}
-}
+} */
 
-#slideset2 > * {
+/* #slideset2 > * {
     position: absolute; 
     top: 100%; 
-    left: 0;
+    left: 0; 
     animation: autoplay2 infinite ease-in-out;
-    /* Dodaj v Cenik v inline styles ( 4*(i+1) )*/
-    /* animation-duration: 20s; */
+    Dodaj v Cenik v inline styles ( 4*(i+1) )
+    animation-duration: 20s; 
+ } */
 
-}
 /* Dodaj v Cenik v inline styles ( 4*i )*/
-/*#slideset2 > *:nth-child(1) {animation-delay: 0s}
+/* #slideset2 > *:nth-child(1) {animation-delay: 0s}
 #slideset2 > *:nth-child(2) {animation-delay: 4s}
 #slideset2 > *:nth-child(3) {animation-delay: 8s}
 #slideset2 > *:nth-child(4) {animation-delay: 12s}
-#slideset2 > *:nth-child(5) {animation-delay: 16s}*/
+#slideset2 > *:nth-child(5) {animation-delay: 16s} */
+
+#slideset1 {
+    height:20em; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* @keyframes autoplay1 {
+    0% {left: -100%}
+    2% {left: 0%}
+    45% {left: 0%}
+    47% {left: -100%}
+    100% {left: -100%}
+} */
+
+/* #slideset1 > * {
+    position: absolute;
+    left: -100%;
+    width: 90%;
+    animation: 40s autoplay1 infinite ease-in-out;
+} */
+
+/* #slideset1 > *:nth-child(1) {animation-delay: 0s}
+#slideset1 > *:nth-child(2) {animation-delay: 20s} */
