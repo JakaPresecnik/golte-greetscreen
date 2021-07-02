@@ -7,14 +7,6 @@ function Cenik (props) {
     useEffect(() => {
         setCeneVozovnice(props.vozovnice[Object.keys(props.vozovnice)[0]]);
         setImeVozovnic(Object.keys(props.vozovnice));
-
-        const intervalCas = setInterval(() => {
-            props.changeTip()
-        }, 4000 * Object.keys(props.vozovnice).length);
-
-        return () => {
-            clearInterval(intervalCas)
-        }
     }, [props.vozovnice])
 
     return (

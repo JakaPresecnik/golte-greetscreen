@@ -4,18 +4,15 @@ import '../styles/ostalo.css';
 import {cene} from '../template/cenik';
 
 function Ostalo () {
-    const [tipVozovnic, setTipVozovnic] = useState(0)
+    const [tipiVozovnic, setTipiVozovnic] = useState([])
     
-    const changeTip = () => {
-        setTipVozovnic(tipVozovnic + 1);
-    }
-
     return (
         <div className='ostalo'>
-            <Cenik 
-                tip={Object.keys(cene)[tipVozovnic]}
-                changeTip={changeTip}
-                vozovnice={cene[Object.keys(cene)[tipVozovnic]]}/>
+            {Object.keys(cene).map((tip, i) => (
+                <Cenik 
+                    tip={tip}
+                    vozovnice={cene[Object.keys(cene)[i]]}/>
+            ))}
         </div>
     )
 }
