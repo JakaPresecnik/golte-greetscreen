@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/golte-greetscreen/static/css/main.27e0f49a.chunk.css",
-    "main.js": "/golte-greetscreen/static/js/main.b132c821.chunk.js",
-    "main.js.map": "/golte-greetscreen/static/js/main.b132c821.chunk.js.map",
+    "main.css": "/golte-greetscreen/static/css/main.c780e293.chunk.css",
+    "main.js": "/golte-greetscreen/static/js/main.637d5959.chunk.js",
+    "main.js.map": "/golte-greetscreen/static/js/main.637d5959.chunk.js.map",
     "runtime-main.js": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js",
     "runtime-main.js.map": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js.map",
     "static/js/2.a59bcf44.chunk.js": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js",
     "static/js/2.a59bcf44.chunk.js.map": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js.map",
     "index.html": "/golte-greetscreen/index.html",
-    "static/css/main.27e0f49a.chunk.css.map": "/golte-greetscreen/static/css/main.27e0f49a.chunk.css.map",
+    "static/css/main.c780e293.chunk.css.map": "/golte-greetscreen/static/css/main.c780e293.chunk.css.map",
     "static/js/2.a59bcf44.chunk.js.LICENSE.txt": "/golte-greetscreen/static/js/2.a59bcf44.chunk.js.LICENSE.txt",
     "static/media/01d.svg": "/golte-greetscreen/static/media/01d.dc2b5aa4.svg",
     "static/media/01n.svg": "/golte-greetscreen/static/media/01n.bf8dc6ce.svg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.f4e0cf46.js",
     "static/js/2.a59bcf44.chunk.js",
-    "static/css/main.27e0f49a.chunk.css",
-    "static/js/main.b132c821.chunk.js"
+    "static/css/main.c780e293.chunk.css",
+    "static/js/main.637d5959.chunk.js"
   ]
 }
