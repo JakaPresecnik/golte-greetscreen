@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Big+Shoulders+Display:wght@300;500&family=Comfortaa:wght@400;700&display=swap');
 
 .ostalo {
-    grid-row: 3/4;
-    grid-column: 1/3;
+    grid-row: 4/5;
+    grid-column: 2/4;
     justify-self: stretch;
     align-self: stretch;
 }
@@ -70,3 +70,38 @@
 .cenik table tr:first-child  td{
     border-left: none;
 }
+
+#slideset2 {
+    height: 5.4em; 
+    position: relative;
+    overflow: hidden;
+}
+
+.centerit {
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes autoplay2 {
+    0% {top: 100%}
+    4% {top: 0%}
+    20% {top: 0%}
+    24% {top: -100%}
+    100% {top: -100%}
+}
+
+#slideset2 > * {
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    animation: autoplay2 infinite ease-in-out;
+    /* Dodaj v Cenik v inline styles ( 4*(i+1) )*/
+    /* animation-duration: 20s; */
+
+}
+/* Dodaj v Cenik v inline styles ( 4*i )*/
+/*#slideset2 > *:nth-child(1) {animation-delay: 0s}
+#slideset2 > *:nth-child(2) {animation-delay: 4s}
+#slideset2 > *:nth-child(3) {animation-delay: 8s}
+#slideset2 > *:nth-child(4) {animation-delay: 12s}
+#slideset2 > *:nth-child(5) {animation-delay: 16s}*/

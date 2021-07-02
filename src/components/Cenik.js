@@ -1,40 +1,50 @@
 import { useEffect, useState } from "react";
 
 function Cenik (props) {
-    const [imeVozovnice, setImeVozovnice] = useState(null);
     const [ceneVozovnice, setCeneVozovnice] = useState({});
+    const [imeVozovnic, setImeVozovnic] = useState([])
 
     useEffect(() => {
-        let i = 1;
-        setImeVozovnice(Object.keys(props.vozovnice)[0])
-        setCeneVozovnice(props.vozovnice[Object.keys(props.vozovnice)[0]])
+        setCeneVozovnice(props.vozovnice[Object.keys(props.vozovnice)[0]]);
+        setImeVozovnic(Object.keys(props.vozovnice));
 
-        const intervalCene = setInterval(() => {
-            setImeVozovnice(Object.keys(props.vozovnice)[i])
-            setCeneVozovnice(props.vozovnice[Object.keys(props.vozovnice)[i]])
-            i++;
-            if(i >= Object.keys(props.vozovnice).length) {
-                i = 0;
-            }
-        }, 4000);
+        const intervalCas = setInterval(() => {
+            props.changeTip()
+        }, 4000 * Object.keys(props.vozovnice).length);
 
         return () => {
-            clearInterval(intervalCene)
+            clearInterval(intervalCas)
         }
-    }, [])
+    }, [props.vozovnice])
+
     return (
         <div className='cenik'>
             <h3>{props.tip}</h3>
-            <p>{imeVozovnice}</p>
-            <table>
-                {ceneVozovnice && Object.keys(ceneVozovnice).map(tip => (
-                    <tr>
-                        <th>{tip}</th>
-                        <td>{ceneVozovnice[tip]} €</td>
-                    </tr>
+            <div 
+                style={{
+                    animationDuration: imeVozovnic.length * 4 + 's'
+                }}
+                id="slideset2"
+            >
+                {imeVozovnic.map((vozovnica, i) => (
+                    <div className='centerit' style={{
+                        animationDuration: imeVozovnic.length * 4 +  's',
+                        animationDelay: i * 4 + 's'
+                        }} >
+                        <p>{vozovnica}</p>
+
+                        <table>
+                            {ceneVozovnice && Object.keys(props.vozovnice[vozovnica]).map(tip => (
+                                <tr>
+                                    <th>{tip}</th>
+                                    <td>{props.vozovnice[vozovnica][tip]} €</td>
+                                </tr>
+                            ))}
+                
+                        </table>
+                    </div>
                 ))}
-    
-            </table>
+            </div>
         </div>
     )
 }
