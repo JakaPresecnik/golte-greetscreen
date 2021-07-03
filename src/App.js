@@ -9,12 +9,15 @@ function importAllImages(r) {
   return images;
 }
 const images = importAllImages(require.context('./bcgr-img', false, /\.(png|jpe?g|svg)$/));
-console.log(images[0])
 
 function App() {
   return (
-    <div className="App" style={{backgroundImage: `url(${images[0].default})`}}>
+    <div className="App">
       <div id="vsi-podatki"></div>
+      <div className="background">
+        <img src={images[1].default} />
+        <img src={images[1].default} />
+      </div>
       <img className="golte-logo" src={logo} />
       <Vreme />
       <Ostalo />

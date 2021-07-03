@@ -84,7 +84,7 @@ function Vreme () {
             <p className="cas">{time}</p>
             <img className="vreme-ikona" src={icons[mozirjeOpenWeather + '.svg'].default} />
             <p><span>Temperatura:</span></p>
-            <p className="temperatura">{golteSkytech.temperatura}</p>
+            <p className="temperatura">{/*golteSkytech.temperatura*/}-</p>
             <div className='veter'>
                 <img src={icons[golteSkytech.smerVetra + '.png'].default} />
                 <div className='veter-text'>

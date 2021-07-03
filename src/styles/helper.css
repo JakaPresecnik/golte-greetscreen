@@ -4,8 +4,6 @@
 .App {
     padding: 0;
     background-color: #999;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     display: grid;
     align-items: center;
@@ -15,6 +13,17 @@
 }
 body {
     margin:0;
+    overflow: hidden;
+}
+.background {
+    position: absolute;
+    grid-row: 1/6;
+    grid-column: 1/6;
+    top: 0;
+    z-index: 0;
+}
+.background img {
+    width: 100%;
 }
 .golte-logo {
     grid-row: 2/3;
@@ -26,6 +35,7 @@ body {
     justify-self: flex-start;
     background-color: rgba(0, 0, 0, 0.08);
     border-radius: 5em;
+    z-index: 1;
 }
 
 @media screen and (max-width: 1500px) {
