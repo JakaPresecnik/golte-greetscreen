@@ -14,9 +14,9 @@ const images = importAllImages(require.context('./bcgr-img', false, /\.(png|jpe?
 function App() {
   const slide = keyframes`
         0% {left: 100%}
-        10% {left: 0%}
+        ${20 / Object.keys(images).length}% {left: 0%}
         ${100 / Object.keys(images).length}% {left: 0%}
-        ${100 / Object.keys(images).length + 10}% {left: -100%}
+        ${100 / Object.keys(images).length + 20 / Object.keys(images).length}% {left: -100%}
         100% {left: -100%}
     `
     const autoplay3 = props => {
