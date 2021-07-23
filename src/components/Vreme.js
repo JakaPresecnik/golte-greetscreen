@@ -7,54 +7,25 @@ function importAllIcons(r) {
     return images;
 }
 const icons = importAllIcons(require.context('../icons', false, /\.(png|jpe?g|svg)$/));
+const arsoURL = 'https://vreme.arso.gov.si/api/1.0/location/?lang=sl&location=Radegunda';
+const arsoIconURL = 'https://vreme.arso.gov.si/app/common/images/svg/weather/';
 
 function Vreme () {
-    const [golteSkytech, setGolteSkytech] = useState({});
-    const [mozirjeOpenWeather, setMozirjeOpenWeather] = useState('');
-    const [loadingData, setLoadingData] = useState(true);
+    const [trenutneRazmere, setTrenutneRazmere] = useState('');
     const [loadingVreme, setLoadingVreme] = useState(true);
     const [time, setTime] = useState(null);
 
-    const getData =  async () => {
-        let data = {}
-        const reqData = new FormData();
-        reqData.append('c', 'tabela');
-
-        const XHR = new XMLHttpRequest();
-        XHR.addEventListener( 'load', function( event ) {
-            // Response v DOM element
-            let responseInHtml = document.getElementById('vsi-podatki');
-            responseInHtml.innerHTML = event.target.responseText;
-
-            // Iz DOM elementa poišči golte in shrani vse sledeče v konstante
-            const golteHtml = Array.from(document.querySelectorAll('td'))
-                .find(el => el.textContent === 'Golte');
-            const hitrostVetraHtml = golteHtml.nextElementSibling;
-            data.hitrostVetra = hitrostVetraHtml.textContent;
-            const sunkiVetraHtml = hitrostVetraHtml.nextElementSibling;
-            data.sunkiVetra = sunkiVetraHtml.textContent;
-            const smerVetraHtml = sunkiVetraHtml.nextElementSibling;
-            data.smerVetra = smerVetraHtml.textContent;
-            const temperaturaHtml = smerVetraHtml.nextElementSibling;
-            data.temperatura = temperaturaHtml.textContent;
-
-            setGolteSkytech(data);
-            setLoadingData(false);
-        } );
-
-        XHR.open('POST', 'https://skytech.si/skytechsys/data.php');
-        XHR.send(reqData)
-    }
-
     const getWeather = async () => {
-        const vreme = await fetch('//api.openweathermap.org/data/2.5/weather?q=Mozirje&appid=' + process.env.REACT_APP_API_KEY)
+        const vreme = await fetch(arsoURL)
         const data = await vreme.json();
-        setMozirjeOpenWeather(data.weather[0].icon);
+
+        console.log(data.observation.features[0].properties.days[0].timeline[0])
+
+        setTrenutneRazmere(data.observation.features[0].properties.days[0].timeline[0]);
         setLoadingVreme(false)
     }
 
     useEffect(() => {
-        getData()
         getWeather()
 
         const intervalCas = setInterval(() => {
@@ -67,7 +38,6 @@ function Vreme () {
         }, 1000);
 
         const intervalPodatki = setInterval(() => {
-            getData()
             getWeather()
         }, 1800000);
 
@@ -76,20 +46,21 @@ function Vreme () {
         }
     }, [])
 
-    if(loadingData || loadingVreme) {
+    if(loadingVreme) {
         return (<div>Loading...</div>)
     }
     return (
         <div className="vreme">
             <p className="cas">{time}</p>
-            <img className="vreme-ikona" src={icons[mozirjeOpenWeather + '.svg'].default} />
+            <p className="vir"><strong>VIR:</strong> ARSO Vremenska postaja Radegunda</p>
+            <img className="vreme-ikona" src={arsoIconURL + trenutneRazmere.clouds_icon_wwsyn_icon + '.svg'} />
             <p><span>Temperatura:</span></p>
-            <p className="temperatura">{/*golteSkytech.temperatura*/}-</p>
+            <p className="temperatura">{trenutneRazmere.t} °C</p>
             <div className='veter'>
-                <img src={icons[golteSkytech.smerVetra + '.png'].default} />
+                <img src={icons[trenutneRazmere.dd_shortText + '.png'].default} />
                 <div className='veter-text'>
-                    <p><span>Veter: </span>{golteSkytech.hitrostVetra}</p>
-                    <p><span>Sunki: </span>{golteSkytech.sunkiVetra}</p>
+                    <p><span>Veter: </span>{trenutneRazmere.ff_val} km/h</p>
+                    <p><span>Vlažnost: </span>{trenutneRazmere.rh}%</p>
                 </div>
             </div>
         </div>

@@ -57,3 +57,13 @@
     font-weight: lighter;
     line-height: 0;
 }
+
+.vir {
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0;
+    padding: 0;
+}
+.vir strong {
+    color: #8CBE1C;
+}
