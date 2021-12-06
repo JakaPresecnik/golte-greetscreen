@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/golte-greetscreen/static/css/main.9f6d365f.chunk.css",
-    "main.js": "/golte-greetscreen/static/js/main.fd244a85.chunk.js",
-    "main.js.map": "/golte-greetscreen/static/js/main.fd244a85.chunk.js.map",
+    "main.js": "/golte-greetscreen/static/js/main.e4b8c4d9.chunk.js",
+    "main.js.map": "/golte-greetscreen/static/js/main.e4b8c4d9.chunk.js.map",
     "runtime-main.js": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js",
     "runtime-main.js.map": "/golte-greetscreen/static/js/runtime-main.f4e0cf46.js.map",
     "static/js/2.de663015.chunk.js": "/golte-greetscreen/static/js/2.de663015.chunk.js",
@@ -28,6 +28,7 @@
     "static/media/13n.svg": "/golte-greetscreen/static/media/13n.4d944b0a.svg",
     "static/media/50d.svg": "/golte-greetscreen/static/media/50d.1ec62814.svg",
     "static/media/50n.svg": "/golte-greetscreen/static/media/50n.1ec62814.svg",
+    "static/media/IMG_8400ps.jpg": "/golte-greetscreen/static/media/IMG_8400ps.6611a99b.jpg",
     "static/media/logo.db9ce7b2.png": "/golte-greetscreen/static/media/logo.db9ce7b2.png",
     "static/media/test.jpg": "/golte-greetscreen/static/media/test.8dd20d1f.jpg"
   },
@@ -35,6 +36,6 @@
     "static/js/runtime-main.f4e0cf46.js",
     "static/js/2.de663015.chunk.js",
     "static/css/main.9f6d365f.chunk.css",
-    "static/js/main.fd244a85.chunk.js"
+    "static/js/main.e4b8c4d9.chunk.js"
   ]
 }
