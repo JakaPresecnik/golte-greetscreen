@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&display=swap');
+@media (max-width: 900px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (min-width: 899px) and (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 999px) and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1199px) and (max-width: 1300px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1299px) and (max-width: 1400px) {
+  body {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1399px) and (max-width: 1600px) {
+  body {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1599px) and (max-width: 1720px) {
+  body {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1719px) and (max-width: 1820px) {
+  body {
+    font-size: 27px;
+  }
+}
+@media (min-width: 1819px) {
+  body {
+    font-size: 29px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 3fr;
+}
+.active {
+  background-color: #fff;
+  transition: background-color 0.7s;
+}
+
+.left {
+  width: 33vw;
+  height: 100vh;
+  grid-row: 1 / span 2;
+  background-color: #003763;
+  padding: 0 1.5em 0 0;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.right {
+  height: 35vh;
+  padding: 0 1em 0 1em;
+  background-color: #003763;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 100% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 100% 100%, 0 75%);
+}
+
+.full-box {
+  height: 100%;
+  width: 100%;
+}
+.loading {
+  padding-top: 25vh;
+  width: 350px;
+  margin: auto;
+  height: 100%;
+}
+
+.left-side {
+  padding: 0.3em;
+  position: relative;
+  top: 1.5em;
+  background-color: #ffffffaa;
+}
+
+.right-side {
+  padding: 0.2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.right-side p {
+  font-size: 1.6em;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #fff;
+  margin: 0.1em;
+}
+
+.naprava {
+  font-size: 1.35em;
+  padding: 0.2em;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  border-bottom: 2px solid #003763;
+}
+.naprava:nth-last-child(1) {
+  border: none
+}
+
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.3em;
+  color: #003763;
+  margin: 0.1em;
+}
+.naprava p:first-child {
+  background-color: #003763;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1 / span 2;
+}
+.naprava p:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.naprava p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin: 0.1em;
+}
+.ikona-naprave {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+  background-color: #003763;
+  border-radius: 50%;
+  padding: 0.2em;
+  height: 2em;
+  width: 2em;
+}
+.notes {
+  grid-column: 2 / span 2;
+  font-size: 0.95em;
+}
+.cas{
+  font-size: 6.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  font-family: 'Bebas Neue', cursive;
+  color: #003763;
+}
+
+.right h2 {
+  color: #fff;
+  margin-bottom: 0.02em;
+}
+.bottom {
+  position: relative;
+  grid-column: 2 / span 2;
+  width: 100%;
+  z-index: -1;
+}
+
+.bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 67vw; height: 90vh;
+  background: linear-gradient(190deg, rgba(255,255,255,1) 28%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+}
+.bottom div::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 67vw; height: 90vh;
+  background: linear-gradient(105deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 58%, rgba(0,0,0,0) 100%);
+}
+
+.bottom img {
+  width: 67vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  mix-blend-mode: overlay;
+
+  
+}
