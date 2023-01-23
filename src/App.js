@@ -10,6 +10,8 @@ import morava from './slike/morava.jpg'
 import smrekovec from './slike/smrekovec.jpg'
 import rocka from './slike/ročka.jpg'
 import stariStani from './slike/stari_stani.jpg'
+import Obvestila from './components/Obvestila';
+import Animated from './components/Animated';
 
 function App() {
   const [proge, setProge] = useState(null);
@@ -77,13 +79,17 @@ function App() {
         </div>
       )
   }
-  
+
   return (
     <div className="App">
       <div className='left'><Naprave naprave={naprave} dan={dan} active={active} /></div>
-      <div className='center'><Cajt /></div>
+      <div className='center'><Cajt dan={dan} naslov={delujoceNaprave.filter(n => n.name === active)} /></div>
       <div className='right'><Vreme arso={vremeARSO}/></div>
+      <div className='bottom-center'><Obvestila obvestilo={delujoceNaprave.filter(n => n.name === active)}/></div>
       <div className='bottom'><div><img src={changePic(active)} /></div></div>
+      <div className="animation-wrapper">
+          <Animated />
+      </div>
     </div>
   );
 }

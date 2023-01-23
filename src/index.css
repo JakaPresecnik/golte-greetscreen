@@ -57,7 +57,7 @@ body {
 .App {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: 2fr 2fr 1fr;
 }
 .active {
   background-color: #fff;
@@ -67,7 +67,7 @@ body {
 .left {
   width: 33vw;
   height: 100vh;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   background-color: #003763;
   padding: 0 1.5em 0 0;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
@@ -75,6 +75,7 @@ body {
 }
 
 .right {
+  z-index: 2;
   height: 35vh;
   padding: 0 1em 0 1em;
   background-color: #003763;
@@ -94,6 +95,7 @@ body {
 }
 
 .left-side {
+  z-index: 2;
   padding: 0.3em;
   position: relative;
   top: 1.5em;
@@ -164,18 +166,57 @@ h2 {
   grid-column: 2 / span 2;
   font-size: 0.95em;
 }
+.center {
+  z-index: 2;
+  grid-row: 1 / span 2 ;
+}
 .cas{
   font-size: 6.5em;
-  margin-top: 0.3em;
-  margin-bottom: 0;
   font-family: 'Bebas Neue', cursive;
+  background-color: #fff;
+  margin: 0;
   color: #003763;
+}
+.naslov {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3em;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #003763;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 4em;
+  text-transform: uppercase;
 }
 
 .right h2 {
   color: #fff;
   margin-bottom: 0.02em;
 }
+.bottom-center {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3em;
+}
+.bottom-center p {
+  background-color: #990000aa;
+  border-bottom:  4px solid #b20000;
+  border-top:  4px solid #b20000;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.1em 1em 0.1em 1em;
+  color: #fff;
+}
+
 .bottom {
   position: relative;
   grid-column: 2 / span 2;
@@ -188,14 +229,14 @@ h2 {
   position: absolute;
   bottom: 0; right: 0;
   width: 67vw; height: 90vh;
-  background: linear-gradient(190deg, rgba(255,255,255,1) 28%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(190deg, rgba(255,255,255,1) 23%, rgba(0,0,0,0) 58%, rgba(0,0,0,0) 100%);
 }
 .bottom div::after {
   content: '';
   position: absolute;
   bottom: 0; right: 0;
   width: 67vw; height: 90vh;
-  background: linear-gradient(105deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 58%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(105deg, rgba(255,255,255,1) 15%, rgba(0,0,0,0) 53%, rgba(0,0,0,0) 100%);
 }
 
 .bottom img {
