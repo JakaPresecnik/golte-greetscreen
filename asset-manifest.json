@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/golte-greetscreen/static/css/main.b5845525.css",
-    "main.js": "/golte-greetscreen/static/js/main.bb654ed0.js",
+    "main.css": "/golte-greetscreen/static/css/main.ad54f20f.css",
+    "main.js": "/golte-greetscreen/static/js/main.43cb07a8.js",
     "static/media/stari_stani.jpg": "/golte-greetscreen/static/media/stari_stani.a2d6f9fa45233a30ca97.jpg",
     "static/media/morava.jpg": "/golte-greetscreen/static/media/morava.69c37d0270be68da11c2.jpg",
     "static/media/žekovec.jpg": "/golte-greetscreen/static/media/žekovec.ef7c08949f9724c861a6.jpg",
@@ -11,11 +11,11 @@
     "static/media/trosedežnica.png": "/golte-greetscreen/static/media/trosedežnica.24196be9cdc9765ebbb6.png",
     "static/media/vlečnica.png": "/golte-greetscreen/static/media/vlečnica.3c6e5e571b8c1b77980f.png",
     "index.html": "/golte-greetscreen/index.html",
-    "main.b5845525.css.map": "/golte-greetscreen/static/css/main.b5845525.css.map",
-    "main.bb654ed0.js.map": "/golte-greetscreen/static/js/main.bb654ed0.js.map"
+    "main.ad54f20f.css.map": "/golte-greetscreen/static/css/main.ad54f20f.css.map",
+    "main.43cb07a8.js.map": "/golte-greetscreen/static/js/main.43cb07a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5845525.css",
-    "static/js/main.bb654ed0.js"
+    "static/css/main.ad54f20f.css",
+    "static/js/main.43cb07a8.js"
   ]
 }
