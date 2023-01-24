@@ -1,11 +1,10 @@
-import { icons } from "react-icons";
 import nihalka from '../icons/nihalka.png'
 import vlecnica from '../icons/vlečnica.png'
 import dvosedeznica from '../icons/dvosedežnica.png'
 import trosedeznica from '../icons/trosedežnica.png'
 
 function Naprave(props) {
-    const {naprave, dan, active} = props;
+    const {naprave, dan, active, levo} = props;
     
     const tip = (t, c) => {
         switch(t) {
@@ -24,7 +23,7 @@ function Naprave(props) {
     }
 
     return (
-        <div className="left-side">
+        <div className={`left-side ${levo === 'naprave' ? 'left-active' : 'left-inactive'}`}>
             <h2>Naprave:</h2>
             {naprave.lifts.map(naprava => (
                 <div key={naprava.name} className={`naprava ${active === naprava.name ? "active" : ""}`} style={!naprava.working ? {backgroundColor: "#00366399"} : {}}>

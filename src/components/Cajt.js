@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import ReactLoading from 'react-loading';
+import { MdDownhillSkiing } from 'react-icons/md';
+import logo from '../slike/logo.png';
 
 function Cajt(props) {
     const [time, setTime] = useState(null);
@@ -15,10 +16,34 @@ function Cajt(props) {
             setTime(ura + ':' + minuta + ':'  + sekunda)
         }, 1000);
     }, [])
+
+    const tezavnost = (t) => {
+        switch(t) {
+            case(1):
+                return <p className='lahka ski'><MdDownhillSkiing className="shift" /></p>;
+            case(2):
+                return <p className='tezka ski rotiraj'><MdDownhillSkiing className="shift" /></p>;
+            case(3):
+                return <p className='extremna ski rotiraj-naprej'><MdDownhillSkiing className="shift" /></p>;
+            default:
+                return <p></p>
+        }
+    }    
     if (naslov.length === 0) {
         return (
-            <div className='loading'>
-                <ReactLoading type={'spokes'} color={'#003763'} height={350} width={350} />
+            <div>
+                <p className="cas">{time}</p>
+                <img className="logo" src={logo} alt="logo" />
+            </div>
+        )
+    }
+    if(naslov[0].difficulty) {
+        return (
+            <div>
+                <p className="cas">{time}</p>
+                {tezavnost(naslov[0].difficulty)}
+                <h3>{naslov[0].name}</h3>
+                {naslov[0].snowmaking && <div className='top'></div>}
             </div>
         )
     }
