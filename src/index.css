@@ -280,7 +280,7 @@ h3 {
   position: absolute;
   bottom: 0; right: 0;
   width: 67vw; height: 90vh;
-  background: linear-gradient(105deg, rgba(255,255,255,1) 15%, rgba(0,0,0,0) 53%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(100deg, rgba(255,255,255,1) 15%, rgba(0,0,0,0) 53%, rgba(0,0,0,0) 100%);
 }
 
 .bottom img {
