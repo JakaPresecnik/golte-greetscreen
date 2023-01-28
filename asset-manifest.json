@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/golte-greetscreen/static/css/main.46be3eae.css",
-    "main.js": "/golte-greetscreen/static/js/main.57f927e8.js",
-    "static/media/stari_stani.jpg": "/golte-greetscreen/static/media/stari_stani.a2d6f9fa45233a30ca97.jpg",
-    "static/media/morava.jpg": "/golte-greetscreen/static/media/morava.69c37d0270be68da11c2.jpg",
-    "static/media/golte.jpg": "/golte-greetscreen/static/media/golte.c4a547fc6aad0071010d.jpg",
-    "static/media/proga_medvedjak.jpg": "/golte-greetscreen/static/media/proga_medvedjak.bfaa77f6aa908d1c1bee.jpg",
-    "static/media/proga_stari_stani.jpg": "/golte-greetscreen/static/media/proga_stari_stani.138f79d4913e01d6dfea.jpg",
-    "static/media/žekovec.jpg": "/golte-greetscreen/static/media/žekovec.ef7c08949f9724c861a6.jpg",
-    "static/media/proga_blatnik.jpg": "/golte-greetscreen/static/media/proga_blatnik.e7dff34939262f28ba18.jpg",
-    "static/media/ročka.jpg": "/golte-greetscreen/static/media/ročka.ad83109575c510cd9029.jpg",
+    "main.css": "/golte-greetscreen/static/css/main.4d10729c.css",
+    "main.js": "/golte-greetscreen/static/js/main.df7f5233.js",
+    "static/media/stari_stani.jpg": "/golte-greetscreen/static/media/stari_stani.3a4ea04d8cee7c5015aa.jpg",
+    "static/media/golte.jpg": "/golte-greetscreen/static/media/golte.f9402ae078db073bcfde.jpg",
+    "static/media/morava.jpg": "/golte-greetscreen/static/media/morava.b011c5a9ead7871b099d.jpg",
+    "static/media/žekovec.jpg": "/golte-greetscreen/static/media/žekovec.162fc71de0c09527f299.jpg",
+    "static/media/ročka.jpg": "/golte-greetscreen/static/media/ročka.73e6948dec839516a886.jpg",
     "static/media/medvedjak.jpg": "/golte-greetscreen/static/media/medvedjak.39214e671dfc50bab044.jpg",
     "static/media/smrekovec.jpg": "/golte-greetscreen/static/media/smrekovec.c94c1c095aa95063ef26.jpg",
+    "static/media/proga_medvedjak.jpg": "/golte-greetscreen/static/media/proga_medvedjak.5c6f7196e5b4591c6e9b.jpg",
+    "static/media/proga_stari_stani.jpg": "/golte-greetscreen/static/media/proga_stari_stani.d75556c518ec95fcbf7b.jpg",
+    "static/media/proga_blatnik.jpg": "/golte-greetscreen/static/media/proga_blatnik.f31ec1b5abac961683c8.jpg",
     "static/media/top.png": "/golte-greetscreen/static/media/top.8dcf737d7b8809eae9ee.png",
     "static/media/logo.png": "/golte-greetscreen/static/media/logo.4afc52691d8f0c9ad2fd.png",
     "static/media/trosedežnica.png": "/golte-greetscreen/static/media/trosedežnica.24196be9cdc9765ebbb6.png",
     "static/media/vlečnica.png": "/golte-greetscreen/static/media/vlečnica.3c6e5e571b8c1b77980f.png",
     "index.html": "/golte-greetscreen/index.html",
-    "main.46be3eae.css.map": "/golte-greetscreen/static/css/main.46be3eae.css.map",
-    "main.57f927e8.js.map": "/golte-greetscreen/static/js/main.57f927e8.js.map"
+    "main.4d10729c.css.map": "/golte-greetscreen/static/css/main.4d10729c.css.map",
+    "main.df7f5233.js.map": "/golte-greetscreen/static/js/main.df7f5233.js.map"
   },
   "entrypoints": [
-    "static/css/main.46be3eae.css",
-    "static/js/main.57f927e8.js"
+    "static/css/main.4d10729c.css",
+    "static/js/main.df7f5233.js"
   ]
 }
