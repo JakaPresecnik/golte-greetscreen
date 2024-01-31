@@ -18,6 +18,9 @@ import Obvestila from './components/Obvestila';
 import Animated from './components/Animated';
 import Proge from './components/Proge';
 
+import liftsDataTemp from './podatki.js'
+import slopesDataTemp from './podatkiDva.js'
+
 function App() {
 // spremenljivke za dobijanje podatkov iz api-jev
   const [proge, setProge] = useState(null);
@@ -66,10 +69,10 @@ function App() {
   }
   const getData = async () => {
     try {
-      const proge = await fetch(`https://api.jpdum.com/Golte/slopes`)
-      const progeData = await proge.json();
-      const naprave = await fetch(`https://api.jpdum.com/Golte/lifts`)
-      const napraveData = await naprave.json();
+      // const proge = await fetch(`https://api.jpdum.com/Golte/slopes`)
+      const progeData = slopesDataTemp;
+      // const naprave = await fetch(`https://api.jpdum.com/Golte/lifts`)
+      const napraveData = liftsDataTemp;
       const arso = await fetch('https://vreme.arso.gov.si/api/1.0/location/?lang=sl&location=Radegunda');
       const arsoData = await arso.json();
 
