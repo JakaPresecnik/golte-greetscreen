@@ -45,7 +45,7 @@ const slopesDataTemp = {
         "notes": [], 
         "notes_count": 0, 
         "snowmaking": false, 
-        "working": true
+        "working": false
       }, 
       {
         "difficulty": 1, 
