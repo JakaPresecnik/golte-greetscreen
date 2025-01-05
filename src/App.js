@@ -155,9 +155,6 @@ function App() {
       <div className="animation-wrapper">
           <Animated />
       </div>
-      <audio id="RadioPlayer" type="audio/mpeg" autoPlay >
-					<source src="https://live.radio.si/Fantasy" type="audio/mp3" />
-		  </audio>
     </div>
   );
 }
