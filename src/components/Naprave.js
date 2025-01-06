@@ -2,6 +2,7 @@ import nihalka from '../icons/nihalka.png'
 import vlecnica from '../icons/vlečnica.png'
 import dvosedeznica from '../icons/dvosedežnica.png'
 import trosedeznica from '../icons/trosedežnica.png'
+import stirisedeznica from '../icons/štirisedežnica.png'
 
 function Naprave(props) {
     const {naprave, dan, active, levo} = props;
@@ -18,6 +19,8 @@ function Naprave(props) {
                         return dvosedeznica;
                     case('3'):
                         return trosedeznica;
+                    case('4'): 
+                        return stirisedeznica;
                 }
         }
     }
