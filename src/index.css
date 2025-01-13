@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&display=swap');
 
+@media (min-width: 250px) and (max-width: 299px) {
+  body {
+    font-size: 4px;
+  }
+}
+
 @media (min-width: 300px) and (max-width: 709px) {
   body {
     font-size: 6px;
